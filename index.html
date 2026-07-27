@@ -92,11 +92,18 @@
   .sidebar .contact-box a:hover { color: var(--sky); }
 
   /* ============ CONTENIDO ============ */
-  main { margin-left: var(--sidebar-w); }
+  main {
+    margin-left: var(--sidebar-w);
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+  }
   .section {
     padding: 76px 64px;
     border-bottom: 1px solid var(--rule);
     max-width: 1040px;
+    width: 100%;
+    min-height: calc(100vh - 58px);   /* cada seccion ocupa la pantalla completa */
+    display: flex; flex-direction: column; justify-content: center;
   }
   .sec-title {
     font-size: 0.82rem; letter-spacing: 0.22em; text-transform: uppercase;
@@ -203,7 +210,8 @@
   #contacto .c-row a:hover { color: var(--sky); }
 
   footer {
-    margin-left: 0; background: var(--navy-dark); color: #9FB4CE;
+    margin-top: auto;                 /* siempre al pie, aunque la seccion sea corta */
+    background: var(--navy-dark); color: #9FB4CE;
     font-size: 0.8rem; padding: 18px 64px;
   }
 
@@ -233,7 +241,7 @@
   @media (max-width: 900px) {
     .sidebar { display: none; }
     main { margin-left: 0; }
-    .section { padding: 56px 22px; }
+    .section { padding: 56px 22px; min-height: calc(100vh - 110px); }
     .topbar {
       display: flex; position: sticky; top: 0; z-index: 30;
       background: var(--navy); color: var(--white);
