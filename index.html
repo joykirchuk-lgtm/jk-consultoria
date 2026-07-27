@@ -149,13 +149,18 @@
   .svc-desc {
     padding: 0 14px 0 84px; color: var(--gray); font-size: 0.97rem; max-width: 800px;
   }
-  .svc:hover .svc-head, .svc:focus-within .svc-head, .svc.open .svc-head {
-    border-left-color: var(--sky); background: #F4F8FD;
+  .svc.open .svc-head { border-left-color: var(--sky); background: #F4F8FD; }
+  .svc.open .svc-num { color: var(--sky); }
+  .svc.open .svc-name { color: var(--sky); }
+  .svc.open .svc-body { grid-template-rows: 1fr; }
+  .svc.open .svc-desc { padding-bottom: 22px; }
+  @media (hover: hover) {
+    .svc:hover .svc-head, .svc:focus-within .svc-head { border-left-color: var(--sky); background: #F4F8FD; }
+    .svc:hover .svc-num, .svc:focus-within .svc-num { color: var(--sky); }
+    .svc:hover .svc-name, .svc:focus-within .svc-name { color: var(--sky); }
+    .svc:hover .svc-body, .svc:focus-within .svc-body { grid-template-rows: 1fr; }
+    .svc:hover .svc-desc, .svc:focus-within .svc-desc { padding-bottom: 22px; }
   }
-  .svc:hover .svc-num, .svc:focus-within .svc-num, .svc.open .svc-num { color: var(--sky); }
-  .svc:hover .svc-name, .svc:focus-within .svc-name, .svc.open .svc-name { color: var(--sky); }
-  .svc:hover .svc-body, .svc:focus-within .svc-body, .svc.open .svc-body { grid-template-rows: 1fr; }
-  .svc:hover .svc-desc, .svc:focus-within .svc-desc, .svc.open .svc-desc { padding-bottom: 22px; }
 
   /* --- Enfoque --- */
   .panel {
@@ -495,7 +500,10 @@
   // ---- En pantallas tactiles el detalle de cada servicio se abre con un tap ----
   document.querySelectorAll('.svc').forEach(function (el) {
     el.addEventListener('click', function () {
-      if (window.matchMedia('(hover: none)').matches) el.classList.toggle('open');
+      if (!window.matchMedia('(hover: none)').matches) return;
+      var estabaAbierta = el.classList.contains('open');
+      document.querySelectorAll('.svc.open').forEach(function (o) { o.classList.remove('open'); });
+      if (!estabaAbierta) el.classList.add('open');
     });
   });
 </script>
