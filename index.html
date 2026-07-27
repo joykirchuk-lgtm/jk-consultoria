@@ -207,6 +207,26 @@
     font-size: 0.8rem; padding: 18px 64px;
   }
 
+
+  /* --- vistas tipo pestaña --- */
+  .view-hidden { display: none !important; }
+
+  /* --- botones de contacto con logo --- */
+  .c-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
+  .c-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    border: 1.5px solid var(--navy); color: var(--navy);
+    text-decoration: none; font-weight: 700; font-size: 0.95rem;
+    padding: 12px 22px; letter-spacing: 0.04em;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .c-btn svg { width: 18px; height: 18px; fill: currentColor; }
+  .c-btn:hover { background: var(--sky); border-color: var(--sky); color: var(--white); }
+  .c-loc { color: var(--gray); font-size: 0.95rem; }
+
+  .sidebar .contact-box a { display: flex; align-items: center; gap: 9px; }
+  .sidebar .contact-box svg { width: 15px; height: 15px; fill: currentColor; flex: none; }
+
   /* ============ MOBILE ============ */
   .topbar { display: none; }
   .mobile-contact { display: none; }
@@ -254,9 +274,9 @@
 
   <div class="contact-box">
     <div class="contact-label">Contacto</div>
-    <a href="https://wa.me/5491161113460?text=Hola%20Joana%2C%20vi%20tu%20sitio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener">WhatsApp</a>
-    <a href="mailto:joykirchuk@gmail.com">joykirchuk@gmail.com</a>
-    <a href="https://www.linkedin.com/in/joana-kirchuk-907538157" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://wa.me/5491161113460?text=Hola%20Joana%2C%20vi%20tu%20sitio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4 1.6 6.7 1.6 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.2-1.7-1.9-3.8-1.9-6 0-5.4 4.9-9.9 10.9-9.9S27 9.5 27 14.9s-4.9 9.9-11 9.9zm5.5-7.2c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>WhatsApp</a>
+    <a href="mailto:joykirchuk@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>Email</a>
+    <a href="https://www.linkedin.com/in/joana-kirchuk-907538157" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
   </div>
 </aside>
 
@@ -401,22 +421,12 @@
   <section class="section" id="contacto">
     <div class="sec-title">Contacto</div>
     <div class="sec-rule"></div>
-    <div class="c-row">
-      <span class="c-label">WhatsApp</span>
-      <a href="https://wa.me/5491161113460?text=Hola%20Joana%2C%20vi%20tu%20sitio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener">+54 9 11 6111-3460</a>
+    <div class="c-actions">
+      <a class="c-btn" href="https://wa.me/5491161113460?text=Hola%20Joana%2C%20vi%20tu%20sitio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4 1.6 6.7 1.6 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.2-1.7-1.9-3.8-1.9-6 0-5.4 4.9-9.9 10.9-9.9S27 9.5 27 14.9s-4.9 9.9-11 9.9zm5.5-7.2c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>WhatsApp</a>
+      <a class="c-btn" href="mailto:joykirchuk@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>Email</a>
+      <a class="c-btn" href="https://www.linkedin.com/in/joana-kirchuk-907538157" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
     </div>
-    <div class="c-row">
-      <span class="c-label">Email</span>
-      <a href="mailto:joykirchuk@gmail.com">joykirchuk@gmail.com</a>
-    </div>
-    <div class="c-row">
-      <span class="c-label">LinkedIn</span>
-      <a href="https://www.linkedin.com/in/joana-kirchuk-907538157" target="_blank" rel="noopener">linkedin.com/in/joana-kirchuk-907538157</a>
-    </div>
-    <div class="c-row">
-      <span class="c-label">Ubicación</span>
-      <span>Buenos Aires, Argentina · proyectos en toda LatAm (remoto)</span>
-    </div>
+    <p class="c-loc">Buenos Aires, Argentina · proyectos en toda LatAm (remoto)</p>
   </section>
 
   <footer>Joana Kirchuk · Consultoría en Riesgo de Crédito · Buenos Aires</footer>
@@ -430,26 +440,55 @@
 </div>
 
 <script>
-  // En pantallas táctiles (sin hover) el detalle de cada servicio se abre con un tap
+  // ---- Vistas tipo pestaña: al entrar se ven Perfil + Servicios; el resto solo desde el índice ----
+  var HOME = ['perfil', 'servicios'];
+  var TABS = ['enfoque', 'modalidades', 'contacto'];
+  var allLinks = document.querySelectorAll('.sidebar nav a, .topbar nav a');
+
+  function showView(id, scroll) {
+    var isHome = HOME.indexOf(id) >= 0;
+    HOME.forEach(function (s) {
+      document.getElementById(s).classList.toggle('view-hidden', !isHome);
+    });
+    TABS.forEach(function (s) {
+      document.getElementById(s).classList.toggle('view-hidden', s !== id);
+    });
+    allLinks.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+    if (scroll) {
+      var target = (id === 'perfil') ? document.body : document.getElementById(id);
+      if (id === 'perfil') { window.scrollTo({ top: 0 }); }
+      else { target.scrollIntoView(); }
+    }
+  }
+
+  allLinks.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = a.getAttribute('href').slice(1);
+      if (location.hash !== '#' + id) { location.hash = id; }
+      else { showView(id, true); }
+    });
+  });
+
+  window.addEventListener('hashchange', function () {
+    var id = location.hash.slice(1);
+    if (HOME.concat(TABS).indexOf(id) < 0) id = 'perfil';
+    showView(id, true);
+  });
+
+  // estado inicial (soporta links directos tipo sitio.com/#enfoque)
+  var initial = location.hash.slice(1);
+  if (HOME.concat(TABS).indexOf(initial) < 0) initial = 'perfil';
+  showView(initial, initial !== 'perfil');
+
+  // ---- En pantallas tactiles el detalle de cada servicio se abre con un tap ----
   document.querySelectorAll('.svc').forEach(function (el) {
     el.addEventListener('click', function () {
       if (window.matchMedia('(hover: none)').matches) el.classList.toggle('open');
     });
   });
-
-  // Resaltar en el índice la sección visible
-  var links = document.querySelectorAll('.sidebar nav a');
-  var sections = Array.from(links).map(function (a) { return document.querySelector(a.getAttribute('href')); });
-  var obs = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) {
-        links.forEach(function (a) { a.classList.remove('active'); });
-        var i = sections.indexOf(e.target);
-        if (i >= 0) links[i].classList.add('active');
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  sections.forEach(function (s) { if (s) obs.observe(s); });
 </script>
 
 </body>
