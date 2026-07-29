@@ -149,6 +149,16 @@
   .svc-desc {
     padding: 0 14px 0 84px; color: var(--gray); font-size: 0.97rem; max-width: 800px;
   }
+  .svc-toggle {
+    margin-left: auto; align-self: center;
+    font-family: Georgia, serif; font-size: 1.6rem; line-height: 1;
+    color: var(--blue);
+    transition: transform 0.2s ease, color 0.15s ease;
+  }
+  .svc.open .svc-toggle { transform: rotate(45deg); color: var(--sky); }
+  @media (hover: hover) {
+    .svc:hover .svc-toggle, .svc:focus-within .svc-toggle { transform: rotate(45deg); color: var(--sky); }
+  }
   .svc.open .svc-head { border-left-color: var(--sky); background: #F4F8FD; }
   .svc.open .svc-num { color: var(--sky); }
   .svc.open .svc-name { color: var(--sky); }
@@ -327,6 +337,7 @@
       <div class="svc-head">
         <span class="svc-num">01</span>
         <span class="svc-name">Diseño de negocios de crédito (greenfield)</span>
+        <span class="svc-toggle" aria-hidden="true">+</span>
       </div>
       <div class="svc-body"><div>
         <p class="svc-desc">Producto, política de crédito, estrategia de originación, underwriting y asignación de exposiciones para lanzar una nueva vertical de lending, incluyendo el plan de aprendizaje cuando todavía no hay datos propios.</p>
@@ -337,6 +348,7 @@
       <div class="svc-head">
         <span class="svc-num">02</span>
         <span class="svc-name">Modelos de riesgo y machine learning</span>
+        <span class="svc-toggle" aria-hidden="true">+</span>
       </div>
       <div class="svc-body"><div>
         <p class="svc-desc">Diseño, validación, implementación y monitoreo de modelos de scoring, PD y decisión: definición del universo de entrenamiento, calibración de cutoffs, puesta en producción y seguimiento de performance.</p>
@@ -347,6 +359,7 @@
       <div class="svc-head">
         <span class="svc-num">03</span>
         <span class="svc-name">Diagnóstico y optimización de portafolios</span>
+        <span class="svc-toggle" aria-hidden="true">+</span>
       </div>
       <div class="svc-body"><div>
         <p class="svc-desc">Análisis de performance por cosechas, roll rates y concentraciones; rediseño de cutoffs y tiers de riesgo, estrategia de pricing ajustado por riesgo y palancas de rentabilidad.</p>
@@ -357,6 +370,7 @@
       <div class="svc-head">
         <span class="svc-num">04</span>
         <span class="svc-name">Pérdida esperada y reservas</span>
+        <span class="svc-toggle" aria-hidden="true">+</span>
       </div>
       <div class="svc-body"><div>
         <p class="svc-desc">Forecasting de pérdidas, análisis de cosechas y metodologías de reservas, en trabajo conjunto con Finanzas para alinear la visión de riesgo y la contable ante management y directorio.</p>
@@ -367,6 +381,7 @@
       <div class="svc-head">
         <span class="svc-num">05</span>
         <span class="svc-name">Gobierno de riesgos y reporting ejecutivo</span>
+        <span class="svc-toggle" aria-hidden="true">+</span>
       </div>
       <div class="svc-body"><div>
         <p class="svc-desc">Frameworks de monitoreo, dashboards de portafolio y KPIs de riesgo para management y directorio: qué mirar, con qué frecuencia, con qué umbrales y quién decide qué cuando algo se sale de rango.</p>
